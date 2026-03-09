@@ -8,10 +8,8 @@
 
 <link rel="stylesheet" href="style.css">
 
-<!-- ICONS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
-<!-- CHART -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
@@ -20,106 +18,83 @@
 
 <div class="dashboard">
 
-<!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Admin</h2>
+    <ul>
+      <li><i class="fa fa-home"></i> <span>Dashboard</span></li>
+      <li><i class="fa fa-chart-line"></i> <span>Analytics</span></li>
+      <li><i class="fa fa-users"></i> <span>Users</span></li>
+      <li><i class="fa fa-shopping-cart"></i> <span>Orders</span></li>
+      <li><i class="fa fa-cog"></i> <span>Settings</span></li>
+    </ul>
+  </div>
 
-<div class="sidebar">
+  <div class="main">
 
-<h2>Admin</h2>
+    <div class="topbar">
+      <h1>Dashboard Overview</h1>
+      <div class="topbar-buttons">
+        <button id="menuBtn"><i class="fa fa-bars"></i></button>
+        <button id="themeToggle"><i class="fa fa-moon"></i></button>
+      </div>
+    </div>
 
-<ul>
+    <div class="cards">
+      <div class="card"><i class="fa fa-users"></i>
+        <h3>Total Users</h3>
+        <p>2,450</p>
+      </div>
+      <div class="card"><i class="fa fa-dollar-sign"></i>
+        <h3>Revenue</h3>
+        <p>$12,800</p>
+      </div>
+      <div class="card"><i class="fa fa-shopping-cart"></i>
+        <h3>Orders</h3>
+        <p>540</p>
+      </div>
+      <div class="card"><i class="fa fa-eye"></i>
+        <h3>Visitors</h3>
+        <p>18,200</p>
+      </div>
+    </div>
 
-<li><i class="fa fa-home"></i> Dashboard</li>
-<li><i class="fa fa-chart-line"></i> Analytics</li>
-<li><i class="fa fa-users"></i> Users</li>
-<li><i class="fa fa-shopping-cart"></i> Orders</li>
-<li><i class="fa fa-cog"></i> Settings</li>
+    <div class="chart-container">
+      <h2>Monthly Sales</h2>
+      <canvas id="salesChart"></canvas>
+    </div>
 
-</ul>
+    <div class="chart-container">
+      <h2>User Growth</h2>
+      <canvas id="userChart"></canvas>
+    </div>
 
-</div>
+    <div class="table-section">
+      <h2>Recent Orders</h2>
+      <table>
+        <tr>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>Laptop</td>
+          <td class="completed">Completed</td>
+        </tr>
+        <tr>
+          <td>Sarah</td>
+          <td>Phone</td>
+          <td class="pending">Pending</td>
+        </tr>
+        <tr>
+          <td>Mike</td>
+          <td>Headphones</td>
+          <td class="shipped">Shipped</td>
+        </tr>
+      </table>
+    </div>
 
-<!-- MAIN -->
-
-<div class="main">
-
-<div class="topbar">
-<h1>Dashboard Overview</h1>
-</div>
-
-<!-- CARDS -->
-
-<div class="cards">
-
-<div class="card">
-<h3>Total Users</h3>
-<p>2,450</p>
-</div>
-
-<div class="card">
-<h3>Revenue</h3>
-<p>$12,800</p>
-</div>
-
-<div class="card">
-<h3>Orders</h3>
-<p>540</p>
-</div>
-
-<div class="card">
-<h3>Visitors</h3>
-<p>18,200</p>
-</div>
-
-</div>
-
-<!-- CHART -->
-
-<div class="chart-container">
-
-<h2>Monthly Sales</h2>
-
-<canvas id="salesChart"></canvas>
-
-</div>
-
-<!-- TABLE -->
-
-<div class="table-section">
-
-<h2>Recent Orders</h2>
-
-<table>
-
-<tr>
-<th>Customer</th>
-<th>Product</th>
-<th>Status</th>
-</tr>
-
-<tr>
-<td>John</td>
-<td>Laptop</td>
-<td>Completed</td>
-</tr>
-
-<tr>
-<td>Sarah</td>
-<td>Phone</td>
-<td>Pending</td>
-</tr>
-
-<tr>
-<td>Mike</td>
-<td>Headphones</td>
-<td>Shipped</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
+  </div>
 </div>
 
 <script src="script.js"></script>
